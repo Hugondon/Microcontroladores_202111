@@ -14,10 +14,15 @@ PUERTOS:
 	Puerto D: -
 */
 
+/******* Definiciones *******/
+#define CONSTANTE 5
+
 /******* Prototipos *******/
 void mi_funcion(void);
 
 int main(void){
+
+    /******* Variables que se utilizarán *******/
 
     /******* Inicialización GPIOs *******/
 
@@ -31,7 +36,6 @@ int main(void){
 }
 
 /******* Funciones *******/
-
 void mi_funcion(void){
 
 }
