@@ -13,7 +13,10 @@ PUERTOS:
 	Puerto C: -
 	Puerto D: -
 */
+/******* Pseudo código *******/
+/*
 
+*/
 /******* Definiciones *******/
 #define CONSTANTE 5
 
