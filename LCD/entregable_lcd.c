@@ -4,6 +4,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "LCD.h"
 
 /******* Resumen para lector *******/
 /*
@@ -11,26 +12,18 @@ PUERTOS:
 	Puerto A: -
 	Puerto B: -
 	Puerto C: -
-	Puerto D: -
+	Puerto D: LCD
+    7   6   5   4   2   1   0
+    DB7 DB6 DB5 DB4  E   RW  RS
 
-TIMERS:
-    Timer 0: -
-    Timer 1: -
-    Timer 2: -
 */
 /******* Pseudo código *******/
 /*
 
 */
 /******* Definiciones *******/
-#define HIGH(x) ( (x) >> 8)
-#define LOW(x) ( (x) & 0xFF)
-#define CONSTANTE 5
 
 /******* Prototipos *******/
-void mi_funcion(void);
-
-/******* Variables Globales *******/
 
 int main(void){
 
@@ -38,13 +31,14 @@ int main(void){
 
     /******* Inicialización GPIOs *******/
 
-    /******* Inicialización Timers *******/
+    LCD_INI();
+	unsigned char hola[] = "Hola Mundo";
+    LCD_Print(hola, sizeof(hola)/sizeof(unsigned char));
 
     /******* Loop *******/
     while (1){
 
         }
-    }
 	return 0;
 }
 
